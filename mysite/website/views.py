@@ -21,3 +21,5 @@ def cv(request):
 def blog(request):
     return render(request, 'base/blog.html')
 
+def movement(request):
+    return render(request, 'base/movement.html')
