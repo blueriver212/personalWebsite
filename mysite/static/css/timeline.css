@@ -2,6 +2,7 @@ body{
     margin-top:20px;
     color: #bcd0f7;
     background: #1A233A;
+    height: 100%;
 }
 .timeline {
     position: relative;
@@ -191,4 +192,8 @@ body{
     .timeline .timeline-row:nth-child(even) .timeline-content:after {
         display: none;
     }
+}
+
+h1 {
+    width:100%
 }
