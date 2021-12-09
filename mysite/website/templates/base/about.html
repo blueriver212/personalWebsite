@@ -9,13 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <h1>This is the about page</h1>
+    <button onclick="getAll();">All</button>
+    <button onclick="getEducationOnly();">Education Only</button>
+    <button onclick="getWorkExperienceOnly();">Work Experience Only</button>
+    <script src="{% static 'js/timeline.js' %}"></script>
+    <!-- <button>Volunteering Only</button> -->
 
     <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
 </head>
 <body>
     <div class="container">
         <div class="timeline">
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="informed">
                     <div class="timeline-time">
                         September 2021 - Current<small>London</small>
                     </div>
@@ -30,22 +35,11 @@
                             <li>Automating SDA’s daily tasks for reporting user activity using R and Python</li>
                             <li>Developing projects within the Charities Team to raise money for local charities</li>
                             <li>Leading tutorials for interactive mapping for the company, using NodeJS, Express, PostgreSQL and JS</li>
-
                         </ul>
-
-                        <!-- <div class="thumbs">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
-                        </div>
-                        <div class="">
-                            <span class="badge badge-pill">Sales</span>
-                            <span class="badge badge-pill">Admin</span>
-                        </div> -->
                     </div>
                 </div>
         
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="ucl">
                     <div class="timeline-time">
                         September 2020 - September 2021<small>London</small>
                     </div>
@@ -70,7 +64,7 @@
                     </div>
                 </div>
         
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="gather">
                     <div class="timeline-time">
                         March 2020 - December 2020<small>Dec 6</small>
                     </div>
@@ -83,10 +77,20 @@
                             <span class="badge badge-pill">Invoice</span>
                             <span class="badge badge-pill">Tasks</span>
                         </div> -->
+                        <ul style="text-align: left;">
+                            <li>The SRI is used to identify priority investment areas for local stakeholders.</li>
+                            <li>Designed and built a Shiny (R) interactive visualization application for NGOs, Governmental Departments and the World Bank (username: gather password: sanitation).</li>
+                            <li>Lead data-analyst behind the Benchmark Initiative project, looking at the accessibility, accuracy and 
+                                availability of global sanitation data</li>
+                            <li>Predicted toilet locations in low data-coverage areas through semi-variance analysis</li>
+                            <li>  Managed a team of 4 volunteers, supported their work at Gather alongside welfare and professional development.</li>
+                            <li>Acted as Data Steward, where I reported and analysed how Gather is using their data for social good.</li>
+                            <li>Independent Research Consultant alongside my master’s.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="mma">
                     <div class="timeline-time">
                         September 2016 - July 2019<small>Phnom Penh, Cambodia</small>
                     </div>
@@ -94,14 +98,21 @@
                         <img class="thumbs" src="{% static 'images/MMA_logo.jpg' %}" style="width:80px; height:80px;"></img>
                         <h3>Mekong Modelling Associates</h3>
                         <h4>Geospatial Analyst and Cartographer</h4>
-                        <p>
-                            Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar.
-                        </p>
+                        <ul style="text-align: left;">
+                            <li>Secured US$ 300,000 in future funding packages for Mekong Modelling Associates (MMA).</li>
+                            <li>Assigned to analyse dam-burst flood scenarios through HEC-RAS and Flood Modeler Pro.</li>
+                            <li>Created risk indexes using Google Earth Engine (JavaScript) from flood and drought data using satellite
+                                imagery.</li>
+                            <li>Analysed the effect of future development, loss of floodplains and climate change on the Mekong Transboundary Area between Cambodia and Thailand.</li>
+                            <li>Reported and presented three papers for the Mekong River Commission (MRC).</li>
+                            <li>Extensively used Python 3.0 to extract time-series data for over 10,000 ISIS hydrological nodes and
+                                visualized this for reports (Matplotib, Geopandas, Pandas).</li>
+                        </ul>
                     </div>
                 </div>
         
         
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="undp">
                     <div class="timeline-time">
                         October 2019<small>Phnom Penh, Cambodia</small>
                     </div>
@@ -109,15 +120,14 @@
                         <img class="thumbs" src="{% static 'images/undp_logo.jpg' %}" style="width:80px; height:80px;"></img>
                         <h3>Independent Consultant</h3>
                         <h4>United Nations Development Program</h4>
-                        <p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
-                        <!-- <div>
-                            <span class="badge badge-pill">Profile</span>
-                            <span class="badge badge-pill">Sales</span>
-                        </div> -->
+                        <ul style="text-align: left;">
+                            <li> Innovated a 'Structured Operational Procedure' (SOP) for Flood Early Warning Systems in Cambodia.</li>
+                            <li>The SOP was instrumental in implementing an effective and efficient knowledge transfer between independent parties: the Prime Minister’s Office and the Ministry of Water Resources and Meteorology.</li>
+                        </ul>
                     </div>
                 </div>
         
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="itc">
                     <div class="timeline-time">
                         August 2019 - November 2019<small>Phnom Penh, Cambodia</small>
                     </div>
@@ -125,20 +135,13 @@
                         <img class="thumbs" src="{% static 'images/itc_logo.png' %}" style="width:80px; height:80px;"></img>
                         <h3>Assistant Lecturer</h3>
                         <h4>Instit de Technologie du Cambodge</h4>
-                        <p class="no-margin">Maxwell Admin dashboard includes invoice, profile, tasks, gallery, projects, maintanence.</p>
-                        <!-- <div class="thumbs">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Maxwell Admin">
-                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Maxwell Admin">
-                        </div>
-                        <div>
-                            <span class="badge badge-pill">Analytics</span>
-                            <span class="badge badge-pill">Contacts</span>
-                        </div> -->
+                        <ul style="text-align: left;">
+                            <li> Taught 30 4th year Engineering students GIS. Starting with the basic interface of ArcMAP, to complex raster manipulation, spatial analysis, and 2D/3D professional cartography.</li>
+                        </ul>      
                     </div>
                 </div>
     
-                <div class="timeline-row">
+                <div class="timeline-row" style="display: block; visibility: visable;" id="durham">
                     <div class="timeline-time">
                         September 2016 - July 2019<small>Durham, England</small>
                     </div>
@@ -166,6 +169,6 @@
         
             </div>
         </div>
-    
+
 </body>
 </html>
