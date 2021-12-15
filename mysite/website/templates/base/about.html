@@ -10,14 +10,14 @@
     <script src="{% static 'js/timeline.js' %}"></script>
     <!-- <button>Volunteering Only</button> -->
     <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
-    <link rel="stylesheet" href="{% static 'css/about_nav.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/about_nav.css' %}"> -->
 </head>
 <body>
    
 <!-- As a heading -->
 
-    <div>
-        <!-- <nav class="navbar navbar-expand-sm fixed-top navbar-light" style="z-index: 1;"> -->
+    <!-- <div>
+         <nav class="navbar navbar-expand-sm fixed-top navbar-light" style="z-index: 1;">
             <nav style="z-index: 1;">
             <a href="/website/about">About</a>
             <a href="/website/projects">Personal Projects</a>
@@ -27,8 +27,19 @@
             <button onclick="getEducationOnly();">Education Only</button>
             <button onclick="getWorkExperienceOnly();">Work Experience Only</button>
             </nav>        
-    </div>
-    <div class="container" style="height:90%">
+    </div> -->
+    <div class="container">
+        <!-- <nav class="navbar navbar-expand-sm fixed-top navbar-light" style="z-index: 1;"> -->
+          <nav class="navbar topnav a name center">
+          <a href="/website/about">About</a>
+          <a href="/website/projects">Personal Projects</a>
+          <a href="#about">Blog</a>
+          <a href="#blog">CV</a>
+        </nav>
+      </div>
+
+
+    <div class="container">
         <div class="timeline">
                 <div class="timeline-row" style="display: block; visibility: visable;" id="informed">
                     <div class="timeline-time">
