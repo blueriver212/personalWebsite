@@ -1,10 +1,11 @@
+
 body, html{
     color: #bcd0f7;
     background: #1A233A;
     height: 100%;
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #button {
@@ -42,9 +43,87 @@ color: black;
 align-items: center;
 }
 
-.portfolio {
-    background-color: yellow;
+/* .portfolio {
     height: 90%; 
-    width: 100%;
-    overflow: hidden;
+    width: 90%;
+    background-color: blueviolet;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.item {
+    width: 200px;
+    margin: 20px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.item-image {
+    background-color: white;
+    height: 100%;
+    margin-bottom: 15px;
+    background-size: cover;
+
+}
+
+.item h1 {
+  position: absolute;
+  width: 100px;
+  font-weight: 100;
+  margin-top: 100px;
+  margin-left: 30px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+} */
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-flow: wrap;
+    flex-direction: row;
+}
+
+.item {
+    height: 350px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.item-image {
+    background-color: turquoise;
+    height: 100%;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.item h1 {
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+}
+
+.satellites {
+    background-image: url('../images/satellites.JPG');
+}
+
+.movement {
+    background-image: url('../images/movement.JPG');
+}
+
+.ufo {
+    background-image: url('../images/ufo.JPG');
+
+}
+
+.item-image:hover {
+    background: red!important;
+    
 }
