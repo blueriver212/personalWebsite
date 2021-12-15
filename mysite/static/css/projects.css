@@ -1,0 +1,50 @@
+body, html{
+    color: #bcd0f7;
+    background: #1A233A;
+    height: 100%;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+#button {
+position:fixed;
+}
+
+.navbar {
+    background-color:#1a233a;
+    position: relative;
+}
+
+
+/* The navbar */
+.topnav {
+overflow: hidden;
+}
+
+/* Navbar links */
+.navbar a {
+overflow: hidden;
+float: left;
+color: #f2f2f2;
+text-align: left;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background-color:white;
+color: black;
+}
+
+.name {
+align-items: center;
+}
+
+.portfolio {
+    background-color: yellow;
+    height: 90%; 
+    width: 100%;
+    overflow: hidden;
+}
