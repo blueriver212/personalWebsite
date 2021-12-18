@@ -108,6 +108,7 @@ align-items: center;
     padding: 15px 20px;
     display: block;
     text-align: center;
+    font-size: 22px;
 }
 
 .satellites {
@@ -120,10 +121,60 @@ align-items: center;
 
 .ufo {
     background-image: url('../images/ufo.JPG');
+}
 
+.ufo {
+    background-image: url('../images/ufo.JPG');
+}
+
+.volunteers {
+    background-image: url('../images/gis-e.JPG');
+}
+
+.crime {
+    background-image: url('../images/movement.JPG');
+}
+
+.sanitation {
+    background-image: url('../images/sanitation.JPG');
+}
+
+.personal {
+    background-image: url('../images/moement.JPG');
+}
+
+.shortest {
+    background-image: url('../images/shortest_path.JPG');
+}
+
+
+
+
+.button {
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    top: 30px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.button a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
 }
 
 .item-image:hover {
-    background: red!important;
-    
+    background-color: turquoise;
+
 }
+
+.item-image:hover .button {
+    opacity: 1;
+}
+  
