@@ -1,12 +1,8 @@
 from mmap import PAGESIZE
 from django.shortcuts import render
 from django.http import HttpResponse
-
-from django.http import FileResponse
-import io
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch
-from reportlab.lib.pagesizes import letter
+import os
+from django.conf import settings
 
 
 # Create your views here.
@@ -24,7 +20,8 @@ def projects(request):
     return render(request, 'base/projects.html')
 
 def cv(request):
-    with open("C:/Users/someg/OneDrive/Documents/PhD_application/Indigo_Brownhall_CV.pdf", 'rb') as pdf:
+    filepath = os.path.join(settings.STATIC_ROOT, 'images\\Indigo_Brownhall_CV.pdf')
+    with open(filepath, 'rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
         response['Content-Disposition'] = 'filename=Indigo_Brownhall.pdf'
         return response
